@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>100% tengah</title>
+<title>YouTube Closing Screen</title>
 
 <style>
 html,
@@ -13,39 +13,25 @@ body{
     width:100%;
     height:100%;
     overflow:hidden;
-    background:transparent;
+    background:#000;
 }
 
-.logo{
+/* Menutupi seluruh layar */
+.closing-screen{
     position:fixed;
-
-    /* Posisi kiri atas */
-    top:2%;
-    left:2%;
-
-    /* Responsif */
-    width:10vw;
-    max-width:200px;
-    min-width:80px;
-    height:auto;
-
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
     z-index:9999;
-    pointer-events:none;
-    user-select:none;
 }
 
-/* Layar HP */
-@media (max-width:768px){
-    .logo{
-        width:18vw;
-    }
-}
-
-/* Layar sangat kecil */
-@media (max-width:480px){
-    .logo{
-        width:22vw;
-    }
+/* Gambar memenuhi seluruh frame */
+.closing-screen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 </style>
 
@@ -53,11 +39,9 @@ body{
 
 <body>
 
-<img
-    class="logo"
-    src="logo tengah warna.png"
-    alt="Logo"
->
+<div class="closing-screen">
+    <img src="logo tengah warna.png" alt="Closing Screen">
+</div>
 
 </body>
 </html>
